@@ -44,7 +44,7 @@ public class StavksScr : MonoBehaviour {
                     if (UserStat.pokemonCapsUser[c, 0] == stavkaCaps[i])
                     {
                         // UserStat.pokemonCapsUser[c, 1]--;
-                        PlayerPrefs.SetInt("IdPok-" + c.ToString(), PlayerPrefs.GetInt("IdPok-" + c.ToString()) -1); ;
+                        PlayerPrefs.SetInt("IdPok-" + c.ToString(), PlayerPrefs.GetInt("IdPok-" + c.ToString()) -1);
                         break;
                     }
 

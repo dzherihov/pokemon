@@ -46,6 +46,9 @@ public class FuncCRUD : MonoBehaviour
             if (PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().idCaps == idPokemon)
             {
                 PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().quantityCaps += count;
+
+
+                //PlayerPrefs.SetInt("IdPok-" + PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().idCaps.ToString(), PlayerPrefs.GetInt("IdPok-" + PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().idCaps.ToString()) + count);
                 UserStatScr.QualCapsAllArray();
                 PokedeskParent.transform.GetChild(i).GetComponent<PokeInfoStat>().QualCaps();
                 
@@ -61,6 +64,7 @@ public class FuncCRUD : MonoBehaviour
             if (PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().idCaps == idPokemon)
             {
                 PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().quantityCaps -= count;
+               // PlayerPrefs.SetInt("IdPok-" + PokedeskParent.transform.GetChild(i).GetComponent<CapsStatScr>().idCaps.ToString(), PlayerPrefs.GetInt("IdPok-" + idPokemon.ToString()) - count);
                 UserStatScr.QualCapsAllArray();
                 PokedeskParent.transform.GetChild(i).GetComponent<PokeInfoStat>().QualCaps();
                 PanelInfoCapsScr.InfoOpenCaps(idPokemon);
